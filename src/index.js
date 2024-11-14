@@ -1,17 +1,12 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const root = ReactDOM.createRoot(document.getElementById('demo'));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Without JSX
+const element = React.createElement("h1", {}, "Programming with Harsh");
+
+// With JSX, directly write HTML code inside JS file
+const element2 = <h1>Programming with Harsh</h1>;
+
+root.render(element);
