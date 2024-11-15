@@ -4,11 +4,12 @@ import AddProduct from './AddProduct';
 import Welcome from './Welcome';
 import Title from './Title';
 import Star from './Star';
+import Register from './Register';
 
 export default class Main extends React.Component { // Exporting a component
     constructor(props) {
         super(props);
-        console.log("Main Component", this.props);
+        // console.log("Main Component", this.props);
         this.state = {
             products: [
                 {
@@ -68,6 +69,7 @@ export default class Main extends React.Component { // Exporting a component
         return <div>
             <h1>Main Class Component </h1>
             <h1>Props Username is {this.props.username}</h1>
+            <Register />
             <ProductList products={this.state.products} />
             <AddProduct />
             <Welcome username={this.props.username} />

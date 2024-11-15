@@ -10,7 +10,7 @@ class Welcome extends React.Component {
             username: "Kavitha",
         }
         console.log("Constructor lifecycle 1");
-        console.log("Welcome Component", this.props);
+        // console.log("Welcome Component", this.props);
     }
 
     updateUsername = () => {
@@ -19,9 +19,14 @@ class Welcome extends React.Component {
         })
     }
 
+    componentDidMount() { // lifecycle, after render, best place to make API calls
+        // call API, response use this.setState
+        console.log("ComponentDidMount lifecycle 3");
+    }
+
     render() { // lifecyle
         console.log("Render lifecycle 2");
-        console.log(this.state);
+        // console.log(this.state);
         let myStyle = { color: "blue", backgroundColor: "yellow" };
 
         return (<div className={styles.containerDiv}>
