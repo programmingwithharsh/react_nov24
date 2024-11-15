@@ -1,3 +1,5 @@
+import "./Product.scss";
+
 export default function Product() {
-    return <h1>Product Functional Component</h1>
+    return <h1 className="product">Product Functional Component</h1>
 }
