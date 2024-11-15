@@ -32,7 +32,7 @@ class Welcome extends React.Component {
         return (<div className={styles.containerDiv}>
 
             <h1>Welcome Component - State Username is {this.state.username}</h1>
-            <button onClick={this.updateUsername}>Update Username</button>
+            <button className="btn btn-primary" onClick={this.updateUsername}>Update Username</button>
             <h1>Welcome Component - Props Username is {this.props.username}</h1>
             <h1 className="innerDiv" style={{ color: "blue", backgroundColor: "yellow" }}>Welcome Class Component header 1</h1>
             <h2 style={myStyle}>Welcome Class Component header 2</h2>

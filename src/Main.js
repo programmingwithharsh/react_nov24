@@ -5,6 +5,7 @@ import Welcome from './Welcome';
 import Title from './Title';
 import Star from './Star';
 import Register from './Register';
+import Nav from './Nav';
 
 export default class Main extends React.Component { // Exporting a component
     constructor(props) {
@@ -67,6 +68,7 @@ export default class Main extends React.Component { // Exporting a component
     }
     render() { // lifecycle
         return <div>
+            <Nav/>
             <h1>Main Class Component </h1>
             <h1>Props Username is {this.props.username}</h1>
             <Register />

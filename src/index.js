@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import React from 'react';
 import Main from './Main';
+import 'bootstrap/dist/css/bootstrap.css';
 
 let username = "Milind"; // string
 let interest = ["Playing Musical Instrument", "Cycling", "Playing Cricket", "Music"]; // array
