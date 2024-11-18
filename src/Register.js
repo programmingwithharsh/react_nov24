@@ -17,6 +17,7 @@ class Register extends React.Component {
         */
 
         let user = {
+            id: Number(new Date()),
             fullname: event.target[0].value,
             email: event.target[1].value,
             password: event.target[2].value,
