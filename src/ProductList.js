@@ -1,4 +1,5 @@
-import Product from "./Product"
+import Product from "./Product";
+import Star from './Star';
 export default function ProductList(props) {
     return <>
         <h1>Product List Functional Component</h1>
@@ -23,7 +24,7 @@ export default function ProductList(props) {
                         <td>{item.releaseDate}</td>
                         <td>{item.description}</td>
                         <td>{item.price}</td>
-                        <td>{item.starRating}</td>
+                        <td>{item.starRating}<Star /></td>
                     </tr>
                 ))}
             </tbody>

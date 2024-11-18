@@ -3,9 +3,10 @@ import ProductList from './ProductList';
 import AddProduct from './AddProduct';
 import Welcome from './Welcome';
 import Title from './Title';
-import Star from './Star';
 import Register from './Register';
 import Nav from './Nav';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NotFound from './NotFound';
 
 export default class Main extends React.Component { // Exporting a component
     constructor(props) {
@@ -67,16 +68,17 @@ export default class Main extends React.Component { // Exporting a component
         }
     }
     render() { // lifecycle
-        return <div>
-            <Nav/>
-            <h1>Main Class Component </h1>
-            <h1>Props Username is {this.props.username}</h1>
-            <Register />
-            <ProductList products={this.state.products} />
-            <AddProduct />
-            <Welcome username={this.props.username} />
-            <Title username={this.props.username} interest={this.props.interest} birth={this.props.birth} />
-            <Star />
-        </div>
+        return <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Nav />}>
+                    <Route index element={<Welcome username={this.props.username} />}></Route>
+                    <Route path="/products" element={<ProductList products={this.state.products} />} ></Route>
+                    <Route path="/addproduct" element={<AddProduct />} ></Route>
+                    <Route path="/title" element={<Title username={this.props.username} interest={this.props.interest} birth={this.props.birth} />}></Route>
+                    <Route path="/register" element={<Register />}></Route>
+                    <Route path="*" element={<NotFound />}></Route>
+                </Route>
+            </Routes>
+        </BrowserRouter>
     }
 }
