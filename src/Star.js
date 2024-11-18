@@ -1,5 +1,11 @@
 const Star = () => {
-    return (<h1>Star Functional Component</h1>);
+    return (<span>
+        <span className="fa fa-star"></span>
+        <span className="fa fa-star"></span>
+        <span className="fa fa-star"></span>
+        <span className="fa fa-star"></span>
+        <span className="fa fa-star"></span>
+    </span>);
 }
 
 export default Star;
