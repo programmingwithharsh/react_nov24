@@ -8,6 +8,7 @@ import Nav from './Nav';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NotFound from './NotFound';
 import ProductDetail from './ProductDetail';
+import UserList from './UserList';
 
 export default class Main extends React.Component { // Exporting a component
     constructor(props) {
@@ -78,6 +79,7 @@ export default class Main extends React.Component { // Exporting a component
                     <Route path="/title" element={<Title username={this.props.username} interest={this.props.interest} birth={this.props.birth} />}></Route>
                     <Route path="/register" element={<Register />}></Route>
                     <Route path="/products/:id" element={<ProductDetail />}></Route>
+                    <Route path="/users" element={<UserList />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Route>
             </Routes>
