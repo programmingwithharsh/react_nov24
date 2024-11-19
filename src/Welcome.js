@@ -13,6 +13,10 @@ class Welcome extends React.Component {
         // console.log("Welcome Component", this.props);
     }
 
+    shouldComponentUpdate() {
+        return true;
+    }
+
     updateUsername = () => {
         this.setState({ // to update state, whenever state updates component rerender
             username: "Sanjeev"
