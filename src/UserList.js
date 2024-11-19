@@ -9,7 +9,7 @@ class UserList extends React.Component {
     }
 
     componentDidMount() {
-        // Call API and update state
+        // Call GET API and update state
         fetch('http://localhost:4000/users')
             .then((response) => response.json())
             .then((json) => this.setState({ // update users state
@@ -19,7 +19,7 @@ class UserList extends React.Component {
 
     render() {
         return (<>
-            <h1>User List Component</h1>
+            <h1>User List Component - Class Component</h1>
             <table className="table table-striped table-hover">
                 <thead>
                     <tr>

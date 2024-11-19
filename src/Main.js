@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NotFound from './NotFound';
 import ProductDetail from './ProductDetail';
 import UserList from './UserList';
+import UserListFunctional from './UserListFunctional';
 
 export default class Main extends React.Component { // Exporting a component
     constructor(props) {
@@ -80,6 +81,7 @@ export default class Main extends React.Component { // Exporting a component
                     <Route path="/register" element={<Register />}></Route>
                     <Route path="/products/:id" element={<ProductDetail />}></Route>
                     <Route path="/users" element={<UserList />}></Route>
+                    <Route path="/users2" element={<UserListFunctional />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Route>
             </Routes>
