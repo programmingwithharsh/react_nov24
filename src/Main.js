@@ -11,6 +11,7 @@ import ProductDetail from './ProductDetail';
 import UserList from './UserList';
 import UserListFunctional from './UserListFunctional';
 import CoreBootstrap from './core-bootstrap/CoreBootstrap';
+import ReactBootstrap from './react-bootstrap/ReactBootstrap';
 
 export default class Main extends React.Component { // Exporting a component
     constructor(props) {
@@ -84,6 +85,7 @@ export default class Main extends React.Component { // Exporting a component
                     <Route path="/users" element={<UserList />}></Route>
                     <Route path="/users2" element={<UserListFunctional />}></Route>
                     <Route path="/corebootstrap" element={<CoreBootstrap />}></Route>
+                    <Route path="/reactbootstrap" element={<ReactBootstrap />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Route>
             </Routes>
