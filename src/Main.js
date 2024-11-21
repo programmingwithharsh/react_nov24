@@ -12,6 +12,7 @@ import UserList from './UserList';
 import UserListFunctional from './UserListFunctional';
 import CoreBootstrap from './core-bootstrap/CoreBootstrap';
 import ReactBootstrap from './react-bootstrap/ReactBootstrap';
+import { removeProduct, addProduct } from "./redux/actions";
 
 export default class Main extends React.Component { // Exporting a component
     constructor(props) {
@@ -72,6 +73,21 @@ export default class Main extends React.Component { // Exporting a component
             ]
         }
     }
+
+    componentDidMount() {
+        this.props.dispatch(removeProduct(1));
+        this.props.dispatch(addProduct({
+            "productId": 6,
+            "productName": "iPhone 15 plus",
+            "productCode": "100",
+            "releaseDate": "March 19, 2024",
+            "description": "Excellent Phone",
+            "price": 80000,
+            "starRating": 3.2,
+            "imageUrl": "https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+        }))
+    }
+
     render() { // lifecycle
         return <BrowserRouter>
             <Routes>
