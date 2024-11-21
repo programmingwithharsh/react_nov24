@@ -2,7 +2,8 @@ import React from "react";
 // import "./Welcome.css";
 import styles from "./Welcome.module.css";
 
-class Welcome extends React.Component {
+// class Welcome extends React.Component {
+class Welcome extends React.PureComponent {
 
     constructor(props) { // lifecyle
         super(props);
@@ -13,9 +14,11 @@ class Welcome extends React.Component {
         // console.log("Welcome Component", this.props);
     }
 
+    /*
     shouldComponentUpdate() {
         return true;
     }
+    */
 
     updateUsername = () => {
         this.setState({ // to update state, whenever state updates component rerender
