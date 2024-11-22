@@ -3,7 +3,6 @@ import Star from './Star';
 import { Link } from "react-router-dom";
 
 export default function Product(props) {
-    debugger
     let item = props.product;
     return <>
         <tr>

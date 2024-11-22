@@ -94,7 +94,7 @@ export default class Main extends React.Component { // Exporting a component
                 <Route path="/" element={<Nav />}>
                     <Route index element={<Welcome username={this.props.username} />}></Route>
                     <Route path="/products" element={<ProductList products={this.state.products} />} ></Route>
-                    <Route path="/addproduct" element={<AddProduct />} ></Route>
+                    <Route path="/addproduct" element={<AddProduct address="Delhi"/>} ></Route>
                     <Route path="/title" element={<Title username={this.props.username} interest={this.props.interest} birth={this.props.birth} />}></Route>
                     <Route path="/register" element={<Register />}></Route>
                     <Route path="/products/:id" element={<ProductDetail />}></Route>

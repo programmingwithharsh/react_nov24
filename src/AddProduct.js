@@ -8,8 +8,36 @@ class AddProduct extends React.Component {
     constructor() {
         super();
         this.state = {
-            redirect: false
+            redirect: false,
+            address: "Mumbai"
         }
+        console.log("constructor"); // Mounting
+    }
+
+    componentWillUnmount() {
+        console.log("componentWillUnmount"); // Unmounting
+    }
+
+    /*
+    static getDerivedStateFromProps(props, state) { // update state from props
+        return {
+            address: props.address
+        }
+    }
+    */
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        document.getElementById("div1").innerHTML = "Before Update " + prevState.address;
+    }
+
+    componentDidUpdate() {
+        document.getElementById("div2").innerHTML = "After Update " + this.state.address;
+    }
+
+    updateAddress = () => {
+        this.setState({
+            address: "Delhi"
+        })
     }
 
     handleSubmit = (event) => {
@@ -40,6 +68,13 @@ class AddProduct extends React.Component {
                 <div className="col-xxl-3" ></div>
                 <div className="col-xxl-6" >
                     <h1>Add Product</h1>
+                    <h2>Address is {this.state.address}</h2>
+
+                    <div id="div1"></div>
+                    <div id="div2"></div>
+
+                    <button className="btn btn-primary mt-2" onClick={this.updateAddress}>Update Address</button>
+
                     <form onSubmit={this.handleSubmit} noValidate>
                         Product name <input className="form-control" type="text" placeholder="Enter product name" name="productName" />
                         Image Url <input className="form-control" type="text" placeholder="Enter image url" name="imageUrl" />
