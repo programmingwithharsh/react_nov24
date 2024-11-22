@@ -13,6 +13,7 @@ import UserListFunctional from './UserListFunctional';
 import CoreBootstrap from './core-bootstrap/CoreBootstrap';
 import ReactBootstrap from './react-bootstrap/ReactBootstrap';
 import { removeProduct, addProduct } from "./redux/actions";
+import HooksExample from './Hooks/HooksExample';
 
 export default class Main extends React.Component { // Exporting a component
     constructor(props) {
@@ -102,6 +103,7 @@ export default class Main extends React.Component { // Exporting a component
                     <Route path="/users2" element={<UserListFunctional />}></Route>
                     <Route path="/corebootstrap" element={<CoreBootstrap />}></Route>
                     <Route path="/reactbootstrap" element={<ReactBootstrap />}></Route>
+                    <Route path="/hooks" element={<HooksExample />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Route>
             </Routes>
